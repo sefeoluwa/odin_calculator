@@ -9,10 +9,20 @@ const subtract = document.querySelector('#subtract');
 const add = document.querySelector('#add');
 const equals = document.querySelector('#equals');
 
+//default display on calculator
+entry.innerHTML = "0"
+
 //function to add numbers 
-let toAdd = function(value1, value2){
-    return (value1 + value2);
-}
+const sum = function(value1, value2) {
+    if(value1 && value2){
+        return(value1 + value2)
+    } else if(typeof value1 || value2 == undefined){
+        return value1;
+    } 
+    else{
+        return value1;
+    }
+};
 
 //function to subtract numbers
 let toSubtract = function(value1, value2){
