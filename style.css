@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+
+.html, body{
+    margin: 0;
+    padding: 0;
+    margin: 0;    
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFF0;
+    font-family: 'Gloock', serif;
+}
+
+.calc{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:400px;
+}
+
+.keys{
+    margin: 3px;
+    width: 80px;
+    height:80px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.numbers{
+    margin: 3px;
+    width: 80px;
+    height:80px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
