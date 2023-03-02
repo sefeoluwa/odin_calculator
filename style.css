@@ -15,16 +15,18 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    margin: 400px 0 0px 750px;
+    margin: 150px 0 0px 750px;
    background-color: #000000;
 }
 
-.entry-display{
-
+.entry{
+    width:400px;
+    height:200px;
 }
 
 .delete{
     margin-top: 20px;
+    
 }
 
 .clear{
@@ -94,6 +96,8 @@
 
         width: 300px;
     }
+
+    
 
     .keys{
         width:60px;
