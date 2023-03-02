@@ -2,7 +2,6 @@
 
 
 .html, body{
-    margin: 0;
     padding: 0;
     margin: 0;    
     height: 100%;
@@ -13,9 +12,31 @@
 
 .calc{
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    margin-top:400px;
+    margin-top: 350px;
+    
+}
+
+
+
+.clear{
+    margin: 3px;
+    width: 170px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: #DCDCDC;
+}
+
+.del{
+    margin: 3px;
+    width: 170px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color:  	#A9A9A9;
 }
 
 .keys{
@@ -24,6 +45,7 @@
     height:80px;
     font-size: 20px;
     font-weight: bolder;
+    background-color: #FFA500;
 }
 
 .numbers{
@@ -32,5 +54,7 @@
     height:80px;
     font-size: 20px;
     font-weight: bolder;
+    background-color: #454545;
+    color:#FFFFF0;
 }
 
