@@ -9,42 +9,46 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="calc">
-          <div id="entry-display" class="entry-display"></div>
+        <div class="calc"> 
+            <!--container for user entry on the calculator and for results-->
+            <div class="entry">  
+                <div id="entry-display" class="entry-display"></div>
+                <div class="result" id="result"></div>
+            </div>
           <div class="buttons">
              <div class="delete">
-                 <button class="keys">Clear</button>
-                 <button class="keys">Delete</button>
+                 <button class="clear" id="clear">Clear</button>
+                 <button class="del" id="del">Delete</button>
               </div>
              <div class="nums">
                  <div class="line-1">
-                    <button class="keys">7</button>
+                    <button class="numbers">7</button>
                     <button class="numbers">8</button>
                     <button class="numbers">9</button>
-                    <button class="numbers">÷</button>
+                    <button class="keys" id="divide">÷</button>
                  </div>
                  <div class="line-2">
                     <button class="numbers">4</button>
                     <button class="numbers">5</button>
                     <button class="numbers">6</button>
-                    <button class="keys">x</button>
+                    <button class="keys" id="multiply">x</button>
                  </div>
                  <div class="line-3">
                     <button class="numbers">1</button>
                     <button class="numbers">2</button>
                     <button class="numbers">3</button>
-                    <button class="keys">-</button>
+                    <button class="keys" id="subtract">-</button>
                  </div>
                  <div class="line-4">
                     <button class="numbers">.</button>
                     <button class="numbers">0</button>
-                    <button class="keys">+</button>
-                    <button class="keys">=</button>
+                    <button class="keys" id="add">+</button>
+                    <button class="keys" id="equals">=</button>
                  </div>
                 </div>
             </div>
         </div>
-        
+        <footer class="footer">Copyright © 2023 <a href="https://github.com/sefeoluwa">Sefeoluwa</a></footer>
         <script src="calc.js" defer></script>
     </body>
 </html>
