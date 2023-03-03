@@ -8,33 +8,55 @@ const multiply = document.querySelector('#multiply');
 const subtract = document.querySelector('#subtract');
 const add = document.querySelector('#add');
 const equals = document.querySelector('#equals');
+const click = document.querySelectorAll('.numbers');
 
 //default display on calculator
-entry.innerHTML = "0"
+ 
+
 
 //function to add numbers 
 const sum = function(value1, value2) {
-    if(value1 && value2){
-        return(value1 + value2)
-    } else if(typeof value1 || value2 == undefined){
-        return value1;
-    } 
-    else{
-        return value1;
-    }
+        
+    return(value1 + value2)
+    
 };
 
 //function to subtract numbers
-let toSubtract = function(value1, value2){
-    return (value1 - value2);
-}
+const toSubtract = function(value1, value2) {
+    
+        return(value1 - value2)
+
+};
 
 //function to multiply numbers
-let toMultiply = function(value1, value2){
-    return (value1 * value2);
-}
+const toMultiply = function(value1, value2) {
+    
+        return(value1 * value2)
+   
+};
 
 //function to divide numbers
 let toDivide = function(value1, value2){
-    return (value1 / value2);
+    
+        return(value1 / value2)
+    
 } 
+
+// function to operate on selected numbers  
+
+function operate(){
+
+
+}
+
+
+
+function valueLog(){
+    let possibleValue = document.querySelectorAll('.numbers, .keys');
+    possibleValue.forEach(possibleValue => possibleValue.addEventListener('click', (e) =>{
+        numSelected = e.target.id;
+        entry.innerHTML += numSelected;
+
+    }))
+}
+valueLog();
