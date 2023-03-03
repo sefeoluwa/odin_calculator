@@ -52,9 +52,10 @@ function operate(){
 function valueLog(){
     let possibleValue = document.querySelectorAll('.numbers, .keys');
     possibleValue.forEach(possibleValue => possibleValue.addEventListener('click', (e) =>{
-        numSelected = e.target.id;
-        entry.innerHTML += numSelected;
-
+        numSelected = e.target.id;    
+        if(entry.innerHTML.length <= 7){
+            entry.innerHTML += numSelected;
+        }
     }))
 }
 valueLog();
