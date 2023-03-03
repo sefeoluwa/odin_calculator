@@ -8,9 +8,7 @@ const multiply = document.querySelector('#multiply');
 const subtract = document.querySelector('#subtract');
 const add = document.querySelector('#add');
 const equals = document.querySelector('#equals');
-const click = document.querySelectorAll('.numbers');
 
-//default display on calculator
  
 
 
@@ -60,3 +58,15 @@ function valueLog(){
     }))
 }
 valueLog();
+
+//clear all entry on the calculator with this function and declaration
+
+clear.addEventListener('click', clearCalc);
+
+function clearCalc(){
+    let clearAll = document.getElementById('entry-display');
+    clearAll.innerHTML = ""
+}
+
+//delete just one entry on the calculator
+
