@@ -13,42 +13,33 @@ let operators = document.querySelectorAll('.keys')
  
 
 
-//function to add numbers 
-const sum = function(value1, value2) {
+/*//function to add numbers 
+const sum = function(previousValue, currentValue) {
         
-    return(value1 + value2)
+    return(previousValue + currentValue)
     
 };
 
 //function to subtract numbers
-const toSubtract = function(value1, value2) {
+const toSubtract = function(previousValue, currentValue) {
     
-        return(value1 - value2)
+        return (previousValue - currentValue)
 
 };
 
 //function to multiply numbers
-const toMultiply = function(value1, value2) {
+const toMultiply = function(previousValue, currentValue) {
     
-        return(value1 * value2)
+        return(previousValue * currentValue)
    
 };
 
 //function to divide numbers
-let toDivide = function(value1, value2){
+let toDivide = function(previousValue, currentValue){
     
-        return(value1 / value2)
+        return(previousValue / currentValue)
     
-} 
-
-// function to operate on selected numbers  
-
-function operate(){
-
-
-}
-
-//function to allow user enter values of up to 7 and write the values on the screen
+} */
 
 
     let numbers = document.querySelectorAll('.numbers');
@@ -56,6 +47,7 @@ function operate(){
     let operator = ''
     let previousValue = ''
 
+    //function to allow user enter values of up to 7 and write the values on the screen
     numbers.forEach((number) => number.addEventListener('click', (e) =>{
       handleNumber(e.target.id)
       entry.textContent =  currentValue; 
@@ -94,11 +86,52 @@ function clearCalc(){
 
 clearCalc();
 
+//calculating the values per clicked operator
+equals.addEventListener('click', function(){
+    calculates();
+    result.innerHTML = '';
+    entry.innerHTML = previousValue; 
+    
+    if(previousValue.length <= 7){
+        entry.innerHTML = previousValue;
+    } else{
+        entry.innerHTML = previousValue.slice(0,7) + '...';
+    }
+})
+   
+
+function calculates(){
+    previousValue = Number(previousValue);
+    currentValue = Number(currentValue);
+
+    if(operator === '+' ){
+        previousValue += currentValue
+    } else if(operator === '-'){
+        previousValue -= currentValue
+    } else if(operator === '*'){
+        previousValue *= currentValue
+    } else{
+        previousValue /= currentValue
+    }
+    previousValue = roundNumber(previousValue)
+    previousValue = previousValue.toString();
+    currentValue = previousValue.toString();
+   
+}
+
+function roundNumber(num){
+    return Math.round(num * 1000) / 1000;
+}
+
+
+
+
+
+
 //delete just one entry on the calculator
 
-del.addEventListener('click', deleteEntry);
+del.addEventListener('click', deletes);
 
-function deleteEntry(){
-    currentValue.toString().slice(0, -1);
-    return currentValue;
-}
+function deletes(
+    
+)
