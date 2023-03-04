@@ -132,6 +132,12 @@ function roundNumber(num){
 
 del.addEventListener('click', deletes);
 
-function deletes(
-    
-)
+function deletes(){
+        entry.innerHTML = entry.innerHTML.slice(0,-1);
+        if(entry.innerHTML === ''){
+            currentValue = '';
+            entry.innerHTML = '';
+        }else{
+            return currentValue;
+        }
+}
