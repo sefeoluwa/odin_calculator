@@ -30,13 +30,13 @@
 .entry-display{
     color: #ffffff;
     font-weight: bolder;
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .result{
     color: #ffffff;
     font-weight: bolder;
-    font-size:50px;
+    font-size: 30px;
 }
 
 .delete{
@@ -44,7 +44,7 @@
     
 }
 
-.clear{
+.clear, .del{
     margin: 3px;
     width: 170px;
     height: 70px;
@@ -54,14 +54,6 @@
     
 }
 
-.del{
-    margin: 3px;
-    width: 170px;
-    height: 70px;
-    font-size: 20px;
-    font-weight: bolder;
-    background-color:  	#A9A9A9;
-}
 
 .equals{
     margin: 3px;
