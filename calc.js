@@ -9,40 +9,9 @@ const subtract = document.querySelector('#subtract');
 const add = document.querySelector('#add');
 const equals = document.querySelector('#equals');
 let operators = document.querySelectorAll('.keys')
+let numbers = document.querySelectorAll('.numbers');
 
- 
-
-
-/*//function to add numbers 
-const sum = function(previousValue, currentValue) {
-        
-    return(previousValue + currentValue)
-    
-};
-
-//function to subtract numbers
-const toSubtract = function(previousValue, currentValue) {
-    
-        return (previousValue - currentValue)
-
-};
-
-//function to multiply numbers
-const toMultiply = function(previousValue, currentValue) {
-    
-        return(previousValue * currentValue)
-   
-};
-
-//function to divide numbers
-let toDivide = function(previousValue, currentValue){
-    
-        return(previousValue / currentValue)
-    
-} */
-
-
-    let numbers = document.querySelectorAll('.numbers');
+//sets initial display on the calc screen
     let currentValue = ''
     let operator = ''
     let previousValue = ''
@@ -80,8 +49,8 @@ clear.addEventListener('click', clearCalc);
 
 function clearCalc(){
     currentValue = ''
-    entry.innerHTML = ''
-    result.innerHTML = ''
+    entry.textContent = ''
+    result.textContent = ''
 }
 
 clearCalc();
@@ -89,13 +58,13 @@ clearCalc();
 //calculating the values per clicked operator
 equals.addEventListener('click', function(){
     calculates();
-    result.innerHTML = '';
-    entry.innerHTML = previousValue; 
+    result.textContent = '';
+    entry.textContent = previousValue; 
     
     if(previousValue.length <= 7){
-        entry.innerHTML = previousValue;
+        entry.textContent  = previousValue;
     } else{
-        entry.innerHTML = previousValue.slice(0,7) + '...';
+        entry.textContent  = previousValue.slice(0,7) + '...';
     }
 })
    
@@ -132,12 +101,8 @@ function roundNumber(num){
 
 del.addEventListener('click', deletes);
 
+
+
 function deletes(){
-        entry.innerHTML = entry.innerHTML.slice(0,-1);
-        if(entry.innerHTML === ''){
-            currentValue = '';
-            entry.innerHTML = '';
-        }else{
-            return currentValue;
-        }
+    entry.textContent = entry.textContent.slice(0,-1);
 }
