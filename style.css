@@ -191,3 +191,9 @@
 }
 
 
+@media only screen and (min-width:1200px) {
+    
+    .calc{
+        width:400px;
+    }
+}
