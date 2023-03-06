@@ -69,7 +69,7 @@
     font-weight: bolder;
     background-color: #C6C6C3;
     border: 2px solid #FFA257;
-    
+    color:#000000;
 }
 
 
@@ -152,9 +152,20 @@
 
     .entry{
         margin-right: 40px;
-
+       
         }
 
+    .entry-display{
+        font-size:40px;
+        
+    }
+
+    .result{
+        font-size:30px;
+        
+    }
+
+    
 }
 
    
@@ -185,7 +196,6 @@
 
     .entry{
         width:50%;
-        
         }
 
 }
