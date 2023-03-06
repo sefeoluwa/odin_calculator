@@ -77,7 +77,7 @@ function calculates(){
         previousValue += currentValue
     } else if(operator === '-'){
         previousValue -= currentValue
-    } else if(operator === '*'){
+    } else if(operator === 'x'){
         previousValue *= currentValue
     } else{
         previousValue /= currentValue
@@ -99,10 +99,18 @@ function roundNumber(num){
 
 //delete just one entry on the calculator
 
-del.addEventListener('click', deletes);
 
+
+del.addEventListener('click', deletes)
 
 
 function deletes(){
     entry.textContent = entry.textContent.slice(0,-1);
+    if(entry.textContent === ''){
+        currentValue = '';
+        entry.textContent = '';
+    }else{
+        currentValue;
+    }
 }
+
